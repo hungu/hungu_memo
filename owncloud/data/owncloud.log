@@ -1,0 +1,2 @@
+{"reqId":"rHOAkg7suR\/YLPmNdd9I","remoteAddr":"106.120.4.150","app":"PHP","message":"touch(): Unable to create file \/data\/web\/html\/hungu_memo\/owncloud\/data\/owncloud.log because No such file or directory at \/data\/web\/html\/hungu_memo\/owncloud\/lib\/private\/log\/owncloud.php#53","level":3,"time":"2016-01-30T18:41:05+00:00"}
+{"reqId":"vORrC1HSP0+kFbWgQt3Y","remoteAddr":"106.120.4.150","app":"PHP","message":"Undefined offset: 0 at \/data\/web\/html\/hungu_memo\/owncloud\/lib\/private\/setup\/mysql.php#45","level":3,"time":"2016-01-30T18:42:22+00:00"}

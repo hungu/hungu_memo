@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://www.lanrenmb.com/User/index.php/Index/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>私人备忘录-登陆</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="./css/hb.css">
+<div class="body">
+  <div class="hbTitle">
+    <span class="t1">Posters</span>
+    <span class="t2">私人备忘录·登录•</span>
+    <ul class="ywgz">
+      <li>无需注册，扫码即可登录</li>
+    </ul>
+  </div>
+  <div class="saomaBox">
+    <div class="b1">
+      <img src="./img/scan_sc.jpg" class="erwei">
+      <div class="b2"><img src="./img/d1.png" alt="打开微信"><span>打开微信</span></div>
+      <span class="b3">用微信“扫一扫”二维码</span>
+	 
+    </div>
+    <img src="./img/rjt.png">
+
+
+ <!-- <form class="form-signin" action="memo.php" method="post"> -->
+     <input type="hidden" name="wx_u" value="1">
+    <div class="b1">
+      <img src="./img/scan_sc.jpg" class="erwei">
+      <span class="b3">在微信回复关键词 mima </span>
+    <input type="text" name="username" class="iny" id="name" placeholder="用户名">
+    <input type="password" name="password" class="iny" id='pass' placeholder="密码">
+	  <!-- <span style="padding-top:15px;display:block;clear:both;font-size: 13PX;"><a href="http://www.lanrenmb.com/User/index.php/Public/reg2.html" id="xieyi" style="color:#f00;">★若登陆不上,请点击这里！★</a></span> -->
+   <!--  < class="adl" style="border:0px; cursor:hand">登陆</button> -->
+    <input type="submit" value="登陆" class="adl" style="border:0px;">
+    </div>
+<!-- </form> -->
+
+
+
+    <img class="tip" src="./img/tip1.png" alt="温馨提示">
+  </div>
+</div>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.adl').mousedown(function() {
+      var name = $('#name').val();
+      var pass = $('#pass').val();
+      if(name=='') {
+        alert('请填写用户名!');
+      } else if(pass=='') {
+        alert('请填写密码!');
+      } else {
+        $.post( 
+          'login_yz.php', 
+          { 
+            name:name, 
+            pass:pass 
+          }, 
+          function (data) //回传函数 
+          { 
+            if(data!='yes') {
+              alert('用户或密码错误');
+            } else {
+              window.location.href='memo.php';
+            }
+            /*$('#name').val(data);*/
+          } 
+        ); 
+      } 
+    });
+  });
+</script>
+<!-- <script src="./login_files/stat.php" language="JavaScript"></script><script src="./login_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=5576089" target="_blank" title="站长统计">站长统计</a> -->
+
+</body></html>
